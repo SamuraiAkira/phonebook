@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <title>Список контактов</title>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <wrapper class="wrapper">
+        <div class="container">
+            <header class="header">
+                <div class="header_image">
+                    <img src="./assets/oct5.png" alt="Осьминог" class="image">
+                </div>
+                <div class="header_search">
+                    <input type="text" id="search" placeholder="Поиск по контактам" onkeyup="searchContacts()">
+                </div>
+            </header>
+            <main class="main">
+                <div id="contacts_list" class="list"></div>
+            </main>
+            <footer class="footer">
+                <button id="add" >Добавить контакт</button>
+            </footer>
+            <div id="modal" class="modal">
+                <div class="modal_content">
+                    <div class="X">
+                        <h2>Добавить контакт</h2>
+                        <span class="close" onclick="closeModal()">&#x2715</span>
+                    </div>
+                    <div class="input">    
+                        <input type="text" id="name" placeholder="Имя" required>
+                        <input type="text" id="phone" placeholder="Телефон" required>
+                        <div class="checkbox">
+                            <input type="checkbox" id="favorite">
+                            <p>Добавить в избранное</p>
+                        </div>
+                        <button id="save_button">Сохранить</button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </wrapper>
+    <script src="./script.js"></script>
+</body>
+</html>
